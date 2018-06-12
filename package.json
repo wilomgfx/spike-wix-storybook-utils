@@ -18,8 +18,10 @@
     "react-test-renderer": "^16.3.1"
   },
   "scripts": {
-    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "build-css":
+      "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css":
+      "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
@@ -32,16 +34,13 @@
     "flow": "flow"
   },
   "lint-staged": {
-    "*.{js,json,css,scss,md}": [
-      "prettier --single-quote --write",
-      "git add"
-    ]
+    "*.{js,json,css,scss,md}": ["prettier --single-quote --write", "git add"]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.4.1",
-    "@storybook/addon-links": "^3.4.1",
-    "@storybook/addons": "^3.4.1",
-    "@storybook/react": "^3.4.1",
+    "@storybook/addon-actions": "^4.0.0-alpha.9",
+    "@storybook/addon-links": "^4.0.0-alpha.9",
+    "@storybook/addons": "^4.0.0-alpha.9",
+    "@storybook/react": "^4.0.0-alpha.9",
     "babel-core": "^6.26.0",
     "babel-runtime": "^6.26.0",
     "css-loader": "^0.28.11",
@@ -55,7 +54,7 @@
     "sass-loader": "^7.0.3",
     "stylable-webpack-plugin": "^1.0.20",
     "style-loader": "^0.21.0",
-    "wix-storybook-utils": "^1.0.85",
+    "wix-storybook-utils": "^1.0.0",
     "yoshi": "^2.8.3"
   }
 }
