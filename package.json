@@ -1,0 +1,61 @@
+{
+  "name": "bali-components-styleguide",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bulma": "^0.7.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "flow-bin": "^0.69.0",
+    "jest-enzyme": "^6.0.0",
+    "lodash": "^4.17.10",
+    "node-sass-chokidar": "^1.2.2",
+    "npm-run-all": "^4.1.2",
+    "ramda": "^0.25.0",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-scripts": "1.1.4",
+    "react-test-renderer": "^16.3.1"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
+    "precommit": "lint-staged",
+    "flow": "flow"
+  },
+  "lint-staged": {
+    "*.{js,json,css,scss,md}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.4.1",
+    "@storybook/addon-links": "^3.4.1",
+    "@storybook/addons": "^3.4.1",
+    "@storybook/react": "^3.4.1",
+    "babel-core": "^6.26.0",
+    "babel-runtime": "^6.26.0",
+    "css-loader": "^0.28.11",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.4",
+    "loader-utils": "^1.1.0",
+    "prettier": "1.12.0",
+    "react-autodocs-utils": "^3.0.0",
+    "sass-loader": "^7.0.3",
+    "stylable-webpack-plugin": "^1.0.20",
+    "style-loader": "^0.21.0",
+    "wix-storybook-utils": "^1.0.85",
+    "yoshi": "^2.8.3"
+  }
+}

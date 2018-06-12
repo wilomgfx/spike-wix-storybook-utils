@@ -1,0 +1,5 @@
+/coverage/
+/yarn.lock
+/.idea/
+/public/
+/.gitignore
